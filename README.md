@@ -1,1 +1,4 @@
-# csc134
+# csc134_24fa
+
+C++ repo
+24 fa, bennettg
