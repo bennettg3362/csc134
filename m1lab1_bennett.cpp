@@ -43,9 +43,25 @@ int main() {
   // Give the answers
   if (your_apples > num_apples) {
     cout << "We don't have that many apples!" << endl;
+    exit(0);
   } else {
     cout << "You have " << your_apples << " apples" << endl;
     total_cost = your_apples * price_per_apple;
     cout << "Your total price is $" << total_cost << endl;
   }
+  
+  // tax and receipt
+  double tax_percent = 0.08;
+  double total_after_tax = total_cost + total_cost * tax_percent;
+  cout << "After tax, that comes out to $" << total_after_tax << endl << endl;
+  cout << "Here's your receipt: " << endl;
+  cout << "--------------------" << endl;
+  cout << setw(3) << num_apples << " Apples";
+  cout << setw(10) << total_cost << endl;
+  cout << setw(10) << "Tax %";
+  cout << setw(9) << tax_percent * 100 << "%" << endl;
+  cout << setw(10) << "Tax";
+  cout << setw(10) << total_cost * tax_percent << endl;
+  cout << setw(10) << "Total";
+  cout << setw(10) << total_after_tax << endl;
 }
