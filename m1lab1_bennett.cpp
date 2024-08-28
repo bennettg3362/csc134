@@ -4,6 +4,7 @@
 // 08-21-2024
 
 #include <iostream>
+#include <iomanip> //for setprecision()
 using namespace std;
 
 int main() { 
@@ -35,8 +36,10 @@ int main() {
   int your_apples = 0;
   cout << "How many apples would you like? " << endl;
   cin >> your_apples;
-  
 
+  // set all decimals to 2 places
+  cout << fixed << setprecision(2);
+  
   // Give the answers
   if (your_apples > num_apples) {
     cout << "We don't have that many apples!" << endl;
