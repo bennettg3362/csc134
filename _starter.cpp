@@ -6,9 +6,3 @@ using namespace std;
 // Gabriel Bennett
 // 09/09/2024
 
-int main() {
-    string name;
-    cout << "Hi, what's your name? ";
-    cin >> name;
-    cout << "Nice to meet you, " << name << endl;
-}
