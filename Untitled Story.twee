@@ -1,0 +1,121 @@
+:: StoryTitle
+Untitled Story
+
+
+:: StoryData
+{
+  "ifid": "A5E22993-2C0E-48EB-87C6-8C897E7C69C5",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Story Start",
+  "zoom": 1
+}
+
+
+:: Back Door {"position":"175,150","size":"100,100"}
+You sneak around back. 
+
+The door is also locked.
+
+[[Break into the house with a rock->break-in]]
+[[Go Home]]
+
+
+
+:: Burger {"position":"600,325","size":"100,100"}
+You ask pizza hut for a burger.
+
+You get hung up on.
+
+You don't get any food, and starve to death.
+
+<img src="https://i.pinimg.com/736x/1d/d8/f5/1dd8f51b8614c5cfaab17ef094262e22.jpg" width="400">
+
+(text-colour:red)[Game Over]
+
+[[Try Again->Story Start]]
+
+
+:: Front Door {"position":"37.5,150","size":"100,100"}
+You go to the front door.
+
+It's locked.
+
+[[Try Something Else->Story Start]]
+
+
+:: Go Home {"position":"325,50","size":"100,100"}
+Ah, home. Nice and relaxing.
+
+Was that your stomach grumbling?
+
+[[Order Pizza]]
+[[Go to Bed]]
+
+
+:: Go to Bed {"position":"625,50","size":"100,100"}
+You go to bed.
+
+Boring ending.
+
+(text-colour:red)[Game Over]
+
+[[Try Again->Story Start]]
+
+
+:: Order Pizza {"position":"475,200","size":"100,100"}
+You dial the number for Pizza Hut.
+
+"Hello, pizza, watchu want?"
+
+[[Pizza]]
+[[Burger]]
+[[Scream incomprehensibly into the phone->Scream]]
+
+
+:: Pizza {"position":"475,325","size":"100,100"}
+You order a pizza.
+
+<img src="https://media.istockphoto.com/id/1448788529/vector/pizza-sliced-colored-line-vector-illustration.jpg?s=612x612&w=0&k=20&c=7C7MOnMps5DNUr1MZ5Ktr-INxOAUDCnGKrk632_3A4k=" width="400">
+
+<img src="https://media.istockphoto.com/id/157030584/vector/thumb-up-emoticon.jpg?s=1024x1024&w=is&k=20&c=PtntOtwm-DY9ETqOo23RQKUS48_ZfYUkKpcZXWzEfNI=" width="400">
+
+You win!
+
+[[Play Again->Story Start]]
+
+
+:: Scream {"position":"350,325","size":"100,100"}
+You scream incomprehensibly at the pizza hut employee.
+
+What's wrong with you? 
+
+<img src="https://bluemoji.io/cdn-proxy/646218c67da47160c64a84d5/64634810bf1d95ef800c5515_71.png" width="400">
+
+(text-colour:red)[Game Over]
+
+[[Try Again->Story Start]]
+
+
+:: Story Start {"position":"100,25","size":"100,100"}
+It's Halloween, and you're at the spooky house down the street.
+
+What do you do?
+
+[[Front Door]]
+[[Back Door]]
+[[Go Home]]
+
+
+:: break-in {"position":"100,300","size":"100,100"}
+You throw a rock at the window and break into the house.
+
+An old man shows up.
+
+This house isn't haunted, just spooky looking.
+
+The cops get called and you're arrested for breaking and entering.
+
+(text-colour:red)[Game Over]
+
+[[Try Again->Story Start]]
