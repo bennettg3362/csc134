@@ -9,11 +9,9 @@ using namespace std;
 //global constant
 const int NUM_DAYS = 5;
 
-double getAverage(int total, int members);
-
 int main() {
     string days[] = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday"};
-    int carsEachDay[NUM_DAYS];
+    int cars[NUM_DAYS];
     int total = 0;
     int input;
     double average;
@@ -21,7 +19,7 @@ int main() {
     for (int i = 0; i < NUM_DAYS; i++) {
         cout << "Please enter the count for " << days[i] << ": ";
         cin >> input;
-        carsEachDay[i] = input;
+        cars[i] = input;
         total += input;
     }
     cout << endl;
@@ -30,7 +28,7 @@ int main() {
 
     for (int i = 0; i < NUM_DAYS; i++) {
         cout << days[i].substr(0, 2) << ": ";
-        for (int j = 0; j < carsEachDay[i]; j++) {
+        for (int j = 0; j < cars[i]; j++) {
             cout << "#";
         }
         cout << endl;
