@@ -3,6 +3,7 @@
 
 using namespace std;
 
+void makeMines();
 void gameplayLoop();
 string getPlayerField();
 int getInputX(string input);
@@ -16,9 +17,7 @@ int main()
     string input;
     int inputX;
     int inputY;
-    int rand1, rand2;
-    srand(time(0));
-
+    
     for (int i = 0; i < 8; i++)
     {
         for (int j = 0; j < 8; j++)
@@ -28,6 +27,27 @@ int main()
             hits[i][j] = 0;
         }
     }
+
+    makeMines();
+
+    gameplayLoop();
+
+    /* input = getPlayerField();
+    inputX = getInputX(input);
+    inputY = stoi(input.substr(1, 1)) - 1;
+
+    hits[inputX][inputY] = 1;
+
+    getPlayerField(); */
+
+    return 0;
+}
+
+void makeMines()
+{
+    int rand1, rand2;
+    srand(time(0));
+    int count = 0;
 
     for (int i = 0; i < 10; i++)
     {
@@ -43,17 +63,53 @@ int main()
         } 
     }
 
-    gameplayLoop();
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 8; j++)
+        {
+            if (mines[i][j] == "💣") {break;}
+            if (mines[i - 1][j - 1] == "💣") {count++;}
+            if (mines[i - 1][j] == "💣") {count++;}
+            if (mines[i - 1][j + 1] == "💣") {count++;}
+            if (mines[i][j - 1] == "💣") {count++;}
+            if (mines[i][j + 1] == "💣") {count++;}
+            if (mines[i + 1][j - 1] == "💣") {count++;}
+            if (mines[i + 1][j] == "💣") {count++;}
+            if (mines[i + 1][j + 1] == "💣") {count++;}
 
-    /* input = getPlayerField();
-    inputX = getInputX(input);
-    inputY = stoi(input.substr(1, 1)) - 1;
-
-    hits[inputX][inputY] = 1;
-
-    getPlayerField(); */
-
-    return 0;
+            switch (count) 
+            {
+                case 0:
+                    break;
+                case 1:
+                    mines[i][j] = "1";
+                    break;
+                case 2:
+                    mines[i][j] = "2";
+                    break;
+                case 3:
+                    mines[i][j] = "3";
+                    break;
+                case 4:
+                    mines[i][j] = "4";
+                    break;
+                case 5:
+                    mines[i][j] = "5";
+                    break;
+                case 6:
+                    mines[i][j] = "6";
+                    break;
+                case 7:
+                    mines[i][j] = "7";
+                    break;
+                case 8:
+                    mines[i][j] = "8";
+                    break;
+            }
+            
+            count = 0;
+        }
+    }
 }
 
 void gameplayLoop()
@@ -84,7 +140,8 @@ string getPlayerField()
             {
                 playerField[i][j] = mines[i][j];
             }
-            cout << playerField[i][j];
+            // cout << playerField[i][j];
+            cout << mines[i][j];
         }
         cout << endl;
     }
